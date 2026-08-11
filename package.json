@@ -1,0 +1,29 @@
+{
+  "name": "vault-api",
+  "version": "1.0.0",
+  "description": "Secure secrets vault REST API — JWT auth, rate limits, audit log, AES-GCM encryption. TypeScript + Fastify.",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "lint": "tsc --noEmit",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "keywords": ["vault", "secrets", "jwt", "fastify", "typescript", "security", "api"],
+  "author": "Mike O'Connor",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@fastify/jwt": "^9.0.1",
+    "@fastify/rate-limit": "^10.2.1",
+    "fastify": "^5.2.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
